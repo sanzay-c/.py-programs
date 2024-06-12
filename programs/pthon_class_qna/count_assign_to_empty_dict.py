@@ -1,13 +1,38 @@
+# words = ["apple", "banana", "apple", "orange", "banana", "apple"]
+
+# words_count = {}
+
+# for word in words:
+#     words_count[word] = words.count(word)
+
+# print(words_count)
+
+
+# def count_number_of_words(list_of_string):
+#     words_count = {}
+
+#     for word in list_of_string:
+#         words_count[word] = list_of_string.count(word)
+
+#     print(words_count)
+
+# words = ["apple", "banana", "apple", "orange", "banana", "apple"]
+# count_number_of_words(words)
+
+
+
+def count_frequencies(words):
+    frequencies = {}
+    for word in words:
+        if word in frequencies:
+            frequencies[word] += 1
+        else:
+            frequencies[word] = 1
+    return frequencies
+
+# Test the function
 words = ["apple", "banana", "apple", "orange", "banana", "apple"]
-
-words_count = {}
-
-for word in words:
-    words_count[word] = words.count(word)
-
-print(words_count)
-
-
+print(count_frequencies(words))
 
 
 
