@@ -11,3 +11,14 @@ def list_of_number():
     print(new_list)
 
 list_of_number()
+
+# Write a Python program that takes a list of strings and returns a new list with the strings in reverse order.
+
+list_of_string = ['name', 'age', 'gender']
+new_list = []
+
+for i in range(len(list_of_string)-1, -1, -1):
+    new_list.append(list_of_string[i])
+
+print(f"The original list: {list_of_string}")
+print(f"The reversed list: {new_list}")
