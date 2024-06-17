@@ -24,7 +24,7 @@ for char in range(len(sentence)):
         count += 1
 
 print(list)
-# --------- you can also count in another way give below
+# # --------- you can also count in another way give below
 sentence = input("Enter a sentence to count number of vowels: ")
 list = []
 vowel = "aeiouAEIOU"
@@ -41,4 +41,19 @@ def count_vowel(sentence):
 
 count_vowel(sentence)
 
+# Write a Python program that takes a string and returns a new string with all the vowels removed.
+user_input = input("Enter a string: ")
+vowels = "aeiouAEIOU"
+
+def remove_vowels(string):
+    new_string = ""
+
+    for char in string:
+        if char not in vowels:
+            new_string += char
+
+    print(f"The new string the vowels removed is: {new_string}")
+
+remove_vowels(user_input)
+        
 
