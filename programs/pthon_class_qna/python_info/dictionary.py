@@ -36,3 +36,18 @@ print(dictionary)  # Output: {}
 
 # typecasting
 print(list(dictionary))
+
+# example for dictionary
+student = {
+    "ram" : 85,
+    "shyam" : 62,
+    "hari" : 56,
+    "ramesh" : 25,
+}
+
+name = input("Enter your name: ").lower()
+
+if name in student: # searching for the key
+    print(f"Hi: {name} your grade is: {student[name]}") # {student[name]} accessing the value of the key 
+else:
+    print("name not found")
