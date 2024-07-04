@@ -5,7 +5,7 @@ def check_even_odd(number):
     else:
         print(f"The {number} is odd")
 
-user_input = input("enter a number: ")
+user_input = int(input("enter a number: "))
 
 check_even_odd(user_input)
 
@@ -22,9 +22,13 @@ reversed(user_input01)
 def length_str(string):
     count = 0
 
-    for i in range(len(string)):
-        count += i
+    for char in string:
+        if char != "":
+            count += 1
     print(f"The length of the entered string is: {count}")
+
+    # # simple ways is;
+    # # print(len(string))
 
 user_input03 = input("enter a string: ")
 
