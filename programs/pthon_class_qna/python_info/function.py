@@ -1,3 +1,4 @@
+# cannot have the same name of the function
 # program to find the even number
 def even_number(start, end):
     for i in range(start, end):
@@ -42,4 +43,13 @@ name = input("Enter a string: ").strip()
 
 rev_name(name)
 
+# **kwargs allows you to pass a variable number of keyword arguments to a function.
+# Inside the function, kwargs is treated as a dictionary, which allows you to access the named parameters passed to the function.
+def my_function(**kwargs):
+    for key, values in kwargs.items():
+        # print(key, values)
+        print(f"{key}: {values}")
 
+my_function(name="sanjay", age=23, address="kathmandu")
+
+# Inside the function, "args" is treated as a tuple, which allows you to iterate over the arguments.
