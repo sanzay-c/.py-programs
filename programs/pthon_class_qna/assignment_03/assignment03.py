@@ -34,17 +34,26 @@ user_input03 = input("enter a string: ")
 
 length_str(user_input03)
 
-# 04. write a function that takes string as an argument and return first char of string
-def first_char(string):  # milenah
-    for i in range(len(string)):
-        first_char = string[i][0]
-        first_char = [0]
+# 04. write a function that takes string as an argument and return first char of string    
+def first_char(string):
+    for char in string:
+        return char
 
-user_input = input("Enter a string: ")
+user_input04 = input("Enter a string: ")
 
-first_char(user_input)
+new_char = first_char(user_input04)
+print(f"The first char in the '{user_input04}' is : {new_char}")
 
 # 05. write a function that takes string and returns true if first char is upper case else return false
+def fist_char_upper(string):
+    for char in string:
+        if char.isupper():
+            return True
+    return False
+
+user_input05 = input("Enter a string: ")
+output = fist_char_upper(user_input05)
+print(f"first char is uppercase: {output}")
 
 # 06. write a function that takes string as an argument and return last char of string
 
@@ -83,6 +92,19 @@ user_input09 = input("Enter a string: ")
 count_u(user_input09)
 
 # 10. write a function that takes string as argument whether letter u is present or not
+# Note: can write the message in the return keyword.
+def letter_u_present(string):
+    letter = 'uU'
+
+    for char in string:
+        if char in letter:
+            return char
+        
+user_input10 = input("Enter a string: ")
+if letter_u_present(user_input10):
+    print("letter 'u' is present in the string")
+else:
+    print("letter 'u' is not present in the string")
 
 # 11. write a function that takes list of numbers as argument  and return list of number with only even number
 def even_only(even_list):
