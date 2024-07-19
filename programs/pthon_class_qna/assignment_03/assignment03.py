@@ -56,6 +56,15 @@ output = fist_char_upper(user_input05)
 print(f"first char is uppercase: {output}")
 
 # 06. write a function that takes string as an argument and return last char of string
+def last_char(string):
+    if string:
+        return string[-1]
+    else:
+        return None
+
+user_input06 = input("Enter a string: ")
+output = last_char(user_input06)
+print(f"The last char of the string is: {output}")
 
 # 07. write a function that takes string as an argument and check if digit is present in the string
 
