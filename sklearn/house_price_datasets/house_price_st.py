@@ -4,10 +4,10 @@ import pickle
 import os
 
 # Load the trained model and scaler
-with open(os.path.join(os.path.dirname(__file__),'trained_model.pkl'), 'rb') as file:
+with open(os.path.join(os.path.dirname(__file__),'model_saved/trained_model.pkl'), 'rb') as file:
     loaded_model = pickle.load(file)
 
-with open(os.path.join(os.path.dirname(__file__),'scaler.pkl'), 'rb') as file:
+with open(os.path.join(os.path.dirname(__file__),'model_saved/scaler.pkl'), 'rb') as file:
     scaler = pickle.load(file)
 
 # Streamlit app
