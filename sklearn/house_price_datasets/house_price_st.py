@@ -2,7 +2,6 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import pickle
-from sklearn.preprocessing import StandardScaler
 
 # Load the trained model and scaler
 with open('model_saved/trained_model.pkl', 'rb') as file:
