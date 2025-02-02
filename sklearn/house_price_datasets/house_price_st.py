@@ -5,7 +5,7 @@ import os
 
 # Load the trained model and scaler
 with open(os.path.join(os.path.dirname(__file__),'trained_model.pkl'), 'rb') as file:
-    model = pickle.load(file)
+    loaded_model = pickle.load(file)
 
 with open(os.path.join(os.path.dirname(__file__),'scaler.pkl'), 'rb') as file:
     scaler = pickle.load(file)
@@ -65,7 +65,7 @@ if st.button("Predict Price"):
     custom_data_scaled = scaler.transform(custom_data)
 
     # Make the prediction
-    y_pred_custom = model.predict(custom_data_scaled)
+    y_pred_custom = loaded_model.predict(custom_data_scaled)
 
     # Display the result
     st.success(f"Predicted House Price is: ${y_pred_custom[0]:,.2f}")
