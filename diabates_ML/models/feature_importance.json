@@ -1,0 +1,229 @@
+{
+  "logistic_regression_coefficients": [
+    {
+      "feature": "Glucose",
+      "importance": 1.1952007845838546
+    },
+    {
+      "feature": "BMI_category_Obese",
+      "importance": 0.9743786364021588
+    },
+    {
+      "feature": "Age_group_Senior",
+      "importance": 0.8554626962395186
+    },
+    {
+      "feature": "Age_group_Elder",
+      "importance": 0.6146610629946152
+    },
+    {
+      "feature": "BMI",
+      "importance": 0.6086185038171389
+    },
+    {
+      "feature": "BMI_category_Overweight",
+      "importance": 0.5938135167223425
+    },
+    {
+      "feature": "Age_group_Middle",
+      "importance": 0.5060783064222437
+    },
+    {
+      "feature": "Pregnancies",
+      "importance": 0.33425912971581784
+    },
+    {
+      "feature": "Glucose_category_Prediabetic",
+      "importance": 0.2058485943368253
+    },
+    {
+      "feature": "DiabetesPedigreeFunction",
+      "importance": 0.19191467568591436
+    },
+    {
+      "feature": "Age",
+      "importance": 0.14363935227362562
+    },
+    {
+      "feature": "BMI_Age_interaction",
+      "importance": 0.12130860133876901
+    },
+    {
+      "feature": "SkinThickness",
+      "importance": 0.11719653565025291
+    },
+    {
+      "feature": "Insulin",
+      "importance": 0.07760269987111715
+    },
+    {
+      "feature": "BloodPressure",
+      "importance": 0.051808147892635645
+    },
+    {
+      "feature": "BMI_category_Underweight",
+      "importance": 0.043277089616499925
+    },
+    {
+      "feature": "Glucose_category_Diabetic",
+      "importance": 0.014111184554720869
+    }
+  ],
+  "permutation_importance": [
+    {
+      "feature": "Glucose",
+      "importance_mean": 0.19720325203252034,
+      "importance_std": 0.026784668522182913
+    },
+    {
+      "feature": "BMI",
+      "importance_mean": 0.03918699186991871,
+      "importance_std": 0.014259522934360482
+    },
+    {
+      "feature": "BMI_category_Obese",
+      "importance_mean": 0.02260162601626019,
+      "importance_std": 0.009586879349815697
+    },
+    {
+      "feature": "BMI_category_Overweight",
+      "importance_mean": 0.011089430894308949,
+      "importance_std": 0.006293250116242009
+    },
+    {
+      "feature": "Age_group_Senior",
+      "importance_mean": 0.006536585365853664,
+      "importance_std": 0.008011426831618672
+    },
+    {
+      "feature": "BMI_Age_interaction",
+      "importance_mean": 0.006536585365853653,
+      "importance_std": 0.0023016028981099725
+    },
+    {
+      "feature": "Glucose_category_Prediabetic",
+      "importance_mean": 0.004260162601626027,
+      "importance_std": 0.0025583804117355166
+    },
+    {
+      "feature": "BloodPressure",
+      "importance_mean": 0.004000000000000015,
+      "importance_std": 0.0010492530604814271
+    },
+    {
+      "feature": "DiabetesPedigreeFunction",
+      "importance_mean": 0.0027967479674796845,
+      "importance_std": 0.004799806107966208
+    },
+    {
+      "feature": "Age_group_Elder",
+      "importance_mean": 0.0017886178861789004,
+      "importance_std": 0.0019087519467745593
+    },
+    {
+      "feature": "Age_group_Middle",
+      "importance_mean": 0.0016260162601626105,
+      "importance_std": 0.004262520293414235
+    },
+    {
+      "feature": "Age",
+      "importance_mean": 0.0013008130081301084,
+      "importance_std": 0.00345695798788124
+    },
+    {
+      "feature": "Pregnancies",
+      "importance_mean": 0.001073170731707318,
+      "importance_std": 0.007531878622537563
+    },
+    {
+      "feature": "Glucose_category_Diabetic",
+      "importance_mean": 0.0006504065040650264,
+      "importance_std": 0.00035624231382447834
+    },
+    {
+      "feature": "Insulin",
+      "importance_mean": 0.00019512195121953457,
+      "importance_std": 0.003959474798107182
+    },
+    {
+      "feature": "SkinThickness",
+      "importance_mean": 0.0001626016260162677,
+      "importance_std": 0.0033267831736707577
+    },
+    {
+      "feature": "BMI_category_Underweight",
+      "importance_mean": 0.0,
+      "importance_std": 0.0
+    }
+  ],
+  "neural_network_importance": [
+    {
+      "feature": "Glucose",
+      "importance": 0.18991869918699178
+    },
+    {
+      "feature": "BMI",
+      "importance": 0.0452032520325204
+    },
+    {
+      "feature": "Pregnancies",
+      "importance": 0.02634146341463417
+    },
+    {
+      "feature": "Age",
+      "importance": 0.01788617886178856
+    },
+    {
+      "feature": "Age_group_Middle",
+      "importance": 0.01073170731707318
+    },
+    {
+      "feature": "Insulin",
+      "importance": 0.007804878048780384
+    },
+    {
+      "feature": "BMI_Age_interaction",
+      "importance": 0.007479674796747937
+    },
+    {
+      "feature": "BMI_category_Obese",
+      "importance": 0.004878048780487698
+    },
+    {
+      "feature": "Glucose_category_Prediabetic",
+      "importance": 0.0039024390243902474
+    },
+    {
+      "feature": "Age_group_Senior",
+      "importance": 0.0035772357723576897
+    },
+    {
+      "feature": "Glucose_category_Diabetic",
+      "importance": 0.0022764227642275703
+    },
+    {
+      "feature": "BMI_category_Overweight",
+      "importance": 0.0013008130081301195
+    },
+    {
+      "feature": "Age_group_Elder",
+      "importance": 0.0009756097560975618
+    },
+    {
+      "feature": "BMI_category_Underweight",
+      "importance": 0.0
+    },
+    {
+      "feature": "SkinThickness",
+      "importance": -0.008130081300813052
+    },
+    {
+      "feature": "DiabetesPedigreeFunction",
+      "importance": -0.01560975609756099
+    },
+    {
+      "feature": "BloodPressure",
+      "importance": -0.047154471544715415
+    }
+  ]
+}

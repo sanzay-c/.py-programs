@@ -1,0 +1,12 @@
+numpy
+pandas
+tensorflow
+scikit-learn
+matplotlib
+seaborn
+joblib
+streamlit
+notebook
+plotly
+nltk
+newspaper3k
