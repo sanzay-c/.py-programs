@@ -80,23 +80,42 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 @st.cache_resource
-def load_model_components(): # load all models 
+def load_model_components():
     """Load all model components"""
     try:
-        model = keras.models.load_model("models/diabetes_model.keras")
-        scaler = joblib.load("models/scaler.joblib")
-        numerical_cols = joblib.load("models/numerical_cols.joblib")
-        feature_columns = joblib.load("models/feature_columns.joblib")
+        # Get the directory where app.py is located
+        base_dir = os.path.dirname(__file__)
         
-        with open("models/metadata.json", "r") as f:
+        # Build paths to model files
+        model_path = os.path.join(base_dir, 'models', 'diabetes_model.keras')
+        scaler_path = os.path.join(base_dir, 'models', 'scaler.joblib')
+        numerical_cols_path = os.path.join(base_dir, 'models', 'numerical_cols.joblib')
+        feature_columns_path = os.path.join(base_dir, 'models', 'feature_columns.joblib')
+        metadata_path = os.path.join(base_dir, 'models', 'metadata.json')
+        
+        # Debug: Check if files exist
+        st.write("🔍 Checking files...")
+        st.write(f"Base directory: {base_dir}")
+        st.write(f"Model exists: {os.path.exists(model_path)}")
+        
+        # Load model components
+        model = keras.models.load_model(model_path)
+        scaler = joblib.load(scaler_path)
+        numerical_cols = joblib.load(numerical_cols_path)
+        feature_columns = joblib.load(feature_columns_path)
+        
+        with open(metadata_path, "r") as f:
             metadata = json.load(f)
-            
+        
+        st.success("✅ All model files loaded successfully!")
         return model, scaler, numerical_cols, feature_columns, metadata
-    except FileNotFoundError:
-        st.error("Model files not found! Please run the training notebook first.")
+        
+    except FileNotFoundError as e:
+        st.error(f"❌ File not found: {str(e)}")
+        st.info("Please ensure all files are in the 'models' folder")
         return None, None, None, None, None
     except Exception as e:
-        st.error(f"Error loading model: {str(e)}")
+        st.error(f"❌ Error loading model: {str(e)}")
         return None, None, None, None, None
 
 def predict_diabetes(patient_data, model, scaler, numerical_cols, feature_columns): 
