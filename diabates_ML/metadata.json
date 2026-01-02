@@ -1,0 +1,48 @@
+{
+  "model_type": "neural_network",
+  "target_column": "Outcome",
+  "feature_columns": [
+    "Pregnancies",
+    "Glucose",
+    "BloodPressure",
+    "SkinThickness",
+    "Insulin",
+    "BMI",
+    "DiabetesPedigreeFunction",
+    "Age",
+    "BMI_Age_interaction",
+    "Age_group_Middle",
+    "Age_group_Senior",
+    "Age_group_Elder",
+    "BMI_category_Obese",
+    "BMI_category_Overweight",
+    "BMI_category_Underweight",
+    "Glucose_category_Prediabetic",
+    "Glucose_category_Diabetic"
+  ],
+  "numerical_columns": [
+    "Pregnancies",
+    "Glucose",
+    "BloodPressure",
+    "SkinThickness",
+    "Insulin",
+    "BMI",
+    "DiabetesPedigreeFunction",
+    "Age",
+    "BMI_Age_interaction"
+  ],
+  "model_metrics": {
+    "accuracy": 0.7758620689655172,
+    "roc_auc": 0.8611382113821138
+  },
+  "feature_engineering": {
+    "invalid_zero_cols": [
+      "Glucose",
+      "BloodPressure",
+      "SkinThickness",
+      "Insulin",
+      "BMI"
+    ],
+    "scaling": "StandardScaler"
+  }
+}
