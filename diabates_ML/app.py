@@ -82,18 +82,27 @@ st.markdown("""
 @st.cache_resource
 def load_model_components(): # load all models 
     """Load all model components"""
+    # Get the directory of the current script
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+    
     try:
-        model = keras.models.load_model("models/diabetes_model.keras")
-        scaler = joblib.load("models/scaler.joblib")
-        numerical_cols = joblib.load("models/numerical_cols.joblib")
-        feature_columns = joblib.load("models/feature_columns.joblib")
+        model_path = os.path.join(BASE_DIR, "models", "diabetes_model.keras")
+        scaler_path = os.path.join(BASE_DIR, "models", "scaler.joblib")
+        numerical_cols_path = os.path.join(BASE_DIR, "models", "numerical_cols.joblib")
+        feature_columns_path = os.path.join(BASE_DIR, "models", "feature_columns.joblib")
+        metadata_path = os.path.join(BASE_DIR, "models", "metadata.json")
+
+        model = keras.models.load_model(model_path)
+        scaler = joblib.load(scaler_path)
+        numerical_cols = joblib.load(numerical_cols_path)
+        feature_columns = joblib.load(feature_columns_path)
         
-        with open("models/metadata.json", "r") as f:
+        with open(metadata_path, "r") as f:
             metadata = json.load(f)
             
         return model, scaler, numerical_cols, feature_columns, metadata
     except FileNotFoundError:
-        st.error("Model files not found! Please run the training notebook first.")
+        st.error(f"Model files not found! Looking in: {BASE_DIR}/models/")
         return None, None, None, None, None
     except Exception as e:
         st.error(f"Error loading model: {str(e)}")
